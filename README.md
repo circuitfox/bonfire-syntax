@@ -2,4 +2,4 @@
 
 A dark theme incorporating warm and earthy colors.
 
-![screenshot](http://github.com/circuitfox/bonfire/bonfire-preview.png?raw=true)
+![screenshot](https://raw.github.com/circuitfox/bonfire-syntax/master/bonfire-preview.png?raw=true)
