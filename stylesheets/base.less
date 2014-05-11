@@ -49,6 +49,7 @@
 
   .cursor {
     color: @syntax-cursor-color;
+    font-style: bold;
   }
 
   .selection .region {
@@ -134,7 +135,7 @@
   &.parameter.function {
     color: @syntax-text-color;
 
-    &.function.coffee {
+    &.coffee {
       color: @light-orange
     }
   }
@@ -147,7 +148,6 @@
 
 .string {
   color: @green;
-
 
   &.regexp {
     color: @cyan;
@@ -168,7 +168,10 @@
       color: @light-gray;
     }
 
-    &.string,
+    &.string {
+      color: @green;
+    }
+
     &.variable,
     &.parameters,
     &.array {
@@ -191,10 +194,28 @@
     }
   }
 
-  &.section.embedded {
-    color: darken(@red, 10%);
+  &.section {
+    &.embedded {
+      color: darken(@red, 10%);
+    }
+
+    &.class,
+    &.method {
+      &.java {
+        color: @syntax-text-color;
+      }
+    }
   }
 
+  &.terminator.java {
+    color: @syntax-text-color;
+  }
+}
+
+.constant.other.symbol.ruby,
+.punctuation.definition.constant.ruby {
+  color: @very-light-orange;
+  font-style: italic;
 }
 
 .support {
@@ -239,9 +260,7 @@
 
   &.other.inherited-class {
     font-style: italic;
-    &.coffee {
-      color: @light-orange;
-    }
+    color: @light-orange;
   }
 }
 
@@ -264,6 +283,10 @@
 
   &.separator {
     background-color: @gray;
+    color: @syntax-text-color;
+  }
+
+  &.method.identifier.java {
     color: @syntax-text-color;
   }
 }
