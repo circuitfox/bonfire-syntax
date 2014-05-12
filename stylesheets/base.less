@@ -118,6 +118,10 @@
 
   &.other.color {
     color: @cyan;
+
+    &.rgb-value.css {
+      color: @orange;
+    }
   }
 
   &.other.symbol {
@@ -192,6 +196,13 @@
       color: @purple;
       font-style: italic;
     }
+
+    &.tag {
+      &.html,
+      &.xml {
+        color: @red;
+      }
+    }
   }
 
   &.section {
@@ -248,6 +259,12 @@
   &.name.tag {
     color: @red;
     text-decoration: underline;
+
+    &.css,
+    &.html,
+    &.xml {
+      text-decoration: none;
+    }
   }
 
   &.other.attribute-name {
@@ -257,7 +274,6 @@
       color: @blue;
     }
   }
-
   &.other.inherited-class {
     font-style: italic;
     color: @light-orange;
@@ -289,6 +305,11 @@
   &.method.identifier.java {
     color: @syntax-text-color;
   }
+}
+
+.meta.tag.sgml.doctype {
+  color: @light-orange;
+  font-style: italic;
 }
 
 .none {
