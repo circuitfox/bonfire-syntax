@@ -211,13 +211,15 @@
     }
 
     &.class,
-    &.method {
+    &.method,
+    &.block {
       &.java {
         color: @syntax-text-color;
       }
     }
   }
 
+  &.method-parameters.java,
   &.terminator.java {
     color: @syntax-text-color;
   }
@@ -302,8 +304,19 @@
     color: @syntax-text-color;
   }
 
-  &.method.identifier.java {
+  &.definition.variable.java {
     color: @syntax-text-color;
+  }
+  
+  &.method {
+    &.identifier.java,
+    &.body.java {
+      color: @syntax-text-color;
+    }
+  }
+
+  &.definition.variable.name.java {
+    color: @red;
   }
 }
 
